@@ -4,7 +4,6 @@ import FeedbackForm from "../components/FeedbackForm";
 import Head from "next/head";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
-import "moment/locale/en-gb";
 
 import styles from "../styles/Home.module.css";
 import "react-big-calendar/lib/css/react-big-calendar.css";
@@ -91,8 +90,6 @@ export default function Home({ events, filters }) {
                 return { style: newStyle };
               }}
               events={Events}
-              min={new Date(2022, 0, 1, 8, 0)}
-              max={new Date(2022, 0, 1, 21, 0)}
               style={{ height: "90vh" }}
             />
           </div>
