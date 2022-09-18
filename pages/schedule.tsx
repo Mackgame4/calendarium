@@ -66,12 +66,13 @@ export default function Schedule({ filters, shifts }: ISchedulesProps) {
         ...shift,
         title: `${shift.title} ${shift.shift} - Edf. ${shift.building} Sala ${shift.room}`,
         start: moment()
-          .day(shift.day)
+          .day(shift.day + 1) //Shift the day by 1, so
+          // 0 becomes Monday instead of Sunday
           .hour(+startHour)
           .minute(+startMinute)
           .toDate(),
         end: moment()
-          .day(shift.day)
+          .day(shift.day + 1)
           .hour(+endHour)
           .minute(+endMinute)
           .toDate(),
